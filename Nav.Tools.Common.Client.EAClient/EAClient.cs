@@ -24,7 +24,7 @@ namespace Nav.Tools.Common.Client.EAClient
 		public void OpenRepositoryWithPassword(String repositoryName)
 		{
 			eaRepository = new Repository();
-			eaRepository.OpenFile2(repositoryName, "Devillo_srvEntArc", "Devillo_srvEntArc");
+			eaRepository.OpenFile2(repositoryName, "name", "password");
 		}
 		
 		public void CloseRepository()
