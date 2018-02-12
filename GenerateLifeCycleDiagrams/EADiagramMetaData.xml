@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Diagram>
+	<Configuration>		
+		<EARepository>F:\EamonnJ\Eamonn.eap</EARepository>
+		<EAStereotype>NAV_ArchiMate_ApplicationComponent</EAStereotype>
+		<LifeCycleAlias>Life Cycle</LifeCycleAlias>		
+		<Position DefaultTop="10" DefalutLeft="10" DefaultWidth="140" DefaultHeight="40"/>
+		<FontMap>
+			<Font Name="Bold">font=Arial;fontsz=100;bold=1;black=0;italic=0;ul=0;charset=0;pitch=34</Font>
+			<Font Name="Normal">font=Arial;fontsz=100;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34</Font>
+		</FontMap>
+		<ColorMap>
+			<Color Name="Grey"        Value="BCol=14605278"/>
+			<Color Name="Red"         Value="BCol=255"/>
+			<Color Name="Light Red"   Value="BCol=7040511"/>
+			<Color Name="Yellow"      Value="BCol=65535"/>
+			<Color Name="Light Green" Value="BCol=4903828"/>
+			<Color Name="Green"       Value="BCol=5418496"/>
+			<Color Name="Blue"        Value="BCol=8676682"/>
+		</ColorMap>
+		<TaggedValueColorMap Name="IntToValue">
+			<Color Name="0"   Value="Grey"/>
+			<Color Name="1"   Value="Red"/>
+			<Color Name="2"   Value="Red"/>
+			<Color Name="3"   Value="Yellow"/>
+			<Color Name="4"   Value="Green"/>
+			<Color Name="5"   Value="Green"/>
+		</TaggedValueColorMap>
+		<TaggedValueColorMap Name="StringToValue">
+			<Color Name="Tolerer"    Value="Yellow"/>
+			<Color Name="Invester"   Value="Green"/>
+			<Color Name="Migrer"     Value="Red"/>
+			<Color Name="Eliminer"   Value="Red"/>
+			<Color Name="Utfaset"    Value="Blue"/>
+			<Color Name="Planlagt"   Value="Grey"/>
+			<Color Name="Ukjent"     Value="Grey"/>
+		</TaggedValueColorMap>
+		<Map Name="BusinessValueMap">
+			<MapValue Key="0" Value="Ikke vurdert"/> 
+			<MapValue Key="1" Value="Ikke akseptabel"/>
+			<MapValue Key="2" Value="Store mangler"/>
+			<MapValue Key="3" Value="Akseptabelt"/>
+			<MapValue Key="4" Value="God egnet"/>
+			<MapValue Key="5" Value="Meget god egnet"/>
+		</Map>
+		<Map Name="TechnicalIntegrity">
+			<MapValue Key="0" Value="Ikke vurdert"/>
+			<MapValue Key="1" Value="Dårlig"/>
+			<MapValue Key="2" Value="Store Mangler"/>
+			<MapValue Key="3" Value="Akseptabelt"/>
+			<MapValue Key="4" Value="God"/>
+			<MapValue Key="5" Value="Meget God"/>
+		</Map>
+	<!--	
+		<IncludeComponents>
+			<Component name=""/>
+			<Component name=""/>
+			<Component name=""/>
+			<Component name=""/>		
+		</IncludeComponents>
+		
+		<ExcludeComponents>
+		</ExcludeComponents>
+	
+		<RemoveDiagrams>
+		</RemoveDiagrams>
+	-->
+	</Configuration>
+	<Elements>
+		
+		<!-- Add the boxes -->
+		<Element Type="Boundary" Name="LifeCycle_Box_1" >
+			<Cell Row="1" Column="1"/>
+			<PositionOffset Top="0" Left="0" Width="0" Height="0"/>
+		</Element>
+		<Element Type="Boundary" Name="LifeCycle_Box_2" >
+			<Cell Row="1" Column="2"/>
+			<PositionOffset Top="0" Left="0" Width="0" Height="0"/>
+		</Element>
+		<Element Type="Boundary" Name="LifeCycle_Box_3" >
+			<Cell Row="2" Column="1"/>
+			<PositionOffset Top="0" Left="0" Width="0" Height="0"/>
+		</Element>
+		<Element Type="Boundary" Name="LifeCycle_Box_4" >
+			<Cell Row="2" Column="2"/>
+			<PositionOffset Top="0" Left="0" Width="0" Height="0"/>
+		</Element>
+		<Element Type="Boundary" Name="LifeCycle_Box_5" >
+			<Cell Row="3" Column="1"/>
+			<PositionOffset Top="0" Left="0" Width="0" Height="0"/>
+		</Element>
+		<Element Type="Boundary" Name="LifeCycle_Box_6" >
+			<Cell Row="3" Column="2"/>
+			<PositionOffset Top="0" Left="0" Width="0" Height="0"/>
+		</Element>
+
+		<!-- Add the labels in column 1 --> 
+		<Element Type="Text" Name="LifeCycle_Label" Text="Livssyklusfase" Font="Bold">
+			<Cell Row="1" Column="1"/>
+			<PositionOffset Top="5" Left="5" Width="-20" Height="-20"/>
+		</Element>
+		<Element Type="Text" Name="BusinessValue_Label" Text="Forretningsverdi" Font="Bold">
+			<Cell Row="2" Column="1"/>
+			<PositionOffset Top="5" Left="5" Width="-20" Height="-20"/>
+		</Element>
+		<Element Type="Text" Name="TechnicalIntegrity_Label" Text="Teknisk Integritet" Font="Bold">
+			<Cell Row="3" Column="1"/>
+			<PositionOffset Top="5" Left="5" Width="-20" Height="-20"/>
+		</Element>
+		
+		<!-- Add backgrounds for labels in column 2 -->
+		<Element Type="Boundary" Name="LifeCycle_Box_7" BackColor="@TAGVALUE:TIME_Livssyklusfase" ColorMap="StringToValue">
+			<Cell Row="1" Column="2"/>
+			<PositionOffset Top="5" Left="5" Width="-10" Height="-10"/>
+		</Element>
+		<Element Type="Boundary" Name="LifeCycle_Box_8" BackColor="@TAGVALUE:Business Value" ColorMap="IntToValue">
+			<Cell Row="2" Column="2"/>
+			<PositionOffset Top="5" Left="5" Width="-10" Height="-10"/>
+		</Element>
+		<Element Type="Boundary" Name="LifeCycle_Box_9" BackColor="@TAGVALUE:Technical Integrity" ColorMap="IntToValue">
+			<Cell Row="3" Column="2"/>
+			<PositionOffset Top="5" Left="5" Width="-10" Height="-10"/>
+		</Element>	
+	
+		<!-- Add the text boxes in column 2 -->
+		<Element Type="Text" Name="LifeCycle_Text" Text="@TAGVALUE:TIME_Livssyklusfase" Font="Normal">
+			<Cell Row="1" Column="2"/>
+			<PositionOffset Top="5" Left="10" Width="-20" Height="-20"/>
+		</Element>
+		<Element Type="Text" Name="BusinessValue_Text" Text="@TAGVALUE:Business Value" TextMap="BusinessValueMap" Font="Normal">
+			<Cell Row="2" Column="2"/>
+			<PositionOffset Top="5" Left="10" Width="-20" Height="-20"/>
+		</Element>		 
+		<Element Type="Text" Name="TechnicalIntegrity_Text" Text="@TAGVALUE:Technical Integrity" TextMap="TechnicalIntegrity" Font="Normal">
+			<Cell Row="3" Column="2"/>
+			<PositionOffset Top="5" Left="10" Width="-20" Height="-20"/>
+		</Element>
+	</Elements>
+</Diagram>
